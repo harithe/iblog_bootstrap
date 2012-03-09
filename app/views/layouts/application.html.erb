@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= content_for?(:title) ? yield(:title) : "Leo的日志" %></title>
+  <%= stylesheet_link_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header class="navbar navbar-fixed-top">
+  <%= render "layouts/header" %>
+</header>
+
+<div class="container master-container">
+  <%= render "layouts/sidebar" %>
+  <div class="content">
+    <% if notice %>
+        <div class="alert alert-success fade in" data-alert="alert">
+          <a class="close" data-dismiss='alert' href="#">×</a>
+
+          <p><%= notice %></p>
+        </div>
+    <% end %>
+
+    <%= yield %>
+  </div>
+</div>
+<footer>
+  <%= Time.now.year %>
+</footer>
+<%= javascript_include_tag "application" %>
+</body>
+</html>

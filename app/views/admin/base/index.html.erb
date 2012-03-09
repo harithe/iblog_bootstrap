@@ -1,0 +1,4 @@
+<ul>
+<li>总共发布了 <%= link_to Article.all.count, admin_articles_path %> 篇博客</li>
+<li>草稿箱中有 <%= link_to Article.unpublished.count, admin_articles_path %> 篇文章未发表</li>
+</ul>

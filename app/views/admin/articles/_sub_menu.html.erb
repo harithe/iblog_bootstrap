@@ -1,0 +1,18 @@
+<% content_for :breadcrumb do %>
+<ul class="breadcrumb">
+    <% if params[:action] == "index" %>
+        <li class="active"><span>文章列表</span></li>
+    <% else %>
+        <li><%= link_to "文章列表", admin_articles_path %></li>
+    <% end %>
+    <% if params[:action] == "new" %>
+        <li class="active"><span>创建</span></li>
+    <% else %>
+        <li><%= link_to "创建", new_admin_article_path %></li>
+    <% end %>
+    <% if params[:action] == "edit" %>
+        <li class="active"><span>修改</span></li>
+    <% end %>
+</ul>
+<% end %>
+

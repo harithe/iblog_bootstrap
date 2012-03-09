@@ -1,0 +1,27 @@
+<%= simple_form_for [:admin, @article], :html => {:class => 'form-horizontal well'} do |f| %>
+    <% if f.error_notification %>
+        <div class="alert alert-error fade in">
+          <a class="close" data-dismiss="alert" href="#">&times;</a>
+          <%= f.error_notification %>
+        </div>
+    <% end %>
+
+    <table width="100%">
+      <tr>
+        <td><%= f.input :name, :input_html => {:class => "span6"} %></td>
+      </tr>
+      <tr>
+        <td><%= f.input :published, :as => :boolean %></td>
+      </tr>
+      <tr>
+        <td><%= f.input :content, :input_html => {:class => "span10"} %></td>
+      </tr>
+      <tr>
+        <td><%= f.input :tag_list, :input_html => {:class => "span10"} %></td>
+      </tr>
+    </table>
+    <div class="form-actions">
+      <%= f.button :submit, :class => 'btn' %>
+      <%= submit_tag 'Cancel', :type => :reset, :class => "btn" %>
+    </div>
+<% end %>

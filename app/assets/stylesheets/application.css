@@ -1,0 +1,107 @@
+/*
+ *= require bootstrap
+ *= require google-code-prettify
+*/
+html, body {
+    background-color: #eee;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0 auto;
+}
+
+.alert p.error_notification {
+    margin-bottom: 0;
+}
+
+header.master {
+    padding-top: 60px;
+}
+
+div.well {
+    padding: 5px 10px;
+}
+
+article {
+    border-bottom: 1px solid #eee;
+    margin: 10px 0;
+}
+
+article .meta {
+    margin: 10px 0;
+    text-align: right;
+}
+
+article h1 {
+    font-size: 22px;
+}
+
+.container > footer p {
+    text-align: center;
+}
+
+.sidebar {
+    width: 20%;
+    float: right;
+    margin-top: 40px;
+    padding-top: 20px;
+    height: 480px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    width: 80%;
+}
+
+.content {
+    background-color: #fff;
+    padding: 60px;
+    margin: 0 -20px;
+    width: 65%;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+#article-comments {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+#comments {
+    margin-bottom: 10px;
+}
+
+.btn.left {
+    float: left;
+}
+
+.btn.right {
+    float: right;
+}
+
+footer {
+    text-align: center;
+}
+
+.navbar-fixed .brand {
+    float: right;
+    padding-right: 0;
+}
+
+.form-vertical .boolean .controls {
+    display: inline-block;
+}

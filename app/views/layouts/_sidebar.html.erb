@@ -1,0 +1,21 @@
+<nav class="sidebar span5 well">
+  <ul class="widgets">
+    <li id="recent-posts" class="widget-container widget_recent_entries">
+      <h3 class="widget-title">Recent Posts</h3>
+      <ul>
+        <% for article in recent_articles %>
+            <li><%= link_to article.name, article_path(article) %></li>
+        <% end %>
+      </ul>
+    </li>
+    <br/>
+    <li id="tags" class="widget-container">
+      <h3 class="widget-title">Tags</h3>
+      <ul>
+          <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+              <%= link_to tag.name, { :action => :index, :tag => tag.name }, :class => css_class %>
+          <% end %>
+      </ul>
+    </li>
+  </ul>
+</nav>

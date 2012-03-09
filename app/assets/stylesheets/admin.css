@@ -1,0 +1,66 @@
+/*
+ *= require bootstrap
+ *= require google-code-prettify
+*/
+html, body {
+    background-color: #eee;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0 auto;
+}
+
+.alert p.error_notification {
+    margin-bottom: 0;
+}
+
+header.master {
+    padding-top: 60px;
+}
+
+div.well {
+    padding: 5px 10px;
+}
+
+article {
+    border-bottom: 1px solid #eee;
+    margin: 10px 0;
+}
+
+article .meta {
+    margin: 10px 0;
+    text-align: right;
+}
+
+.container > footer p {
+    text-align: center;
+}
+
+.sidebar {
+    width: 20%;
+    float: right;
+    margin-top: 40px;
+    height: 480px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    width: 90%;
+}
+
+.content {
+    background-color: #fff;
+    padding: 60px;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}

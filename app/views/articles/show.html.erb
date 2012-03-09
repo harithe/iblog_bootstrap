@@ -1,0 +1,14 @@
+<% title @article.name %>
+<article>
+  <header>
+    <h1><%= @article.name %></h1>
+  </header>
+
+  <div>
+    <div class="meta"><%= @article.created_at.strftime('%Y-%m-%d') %></div>
+    <p>
+      <%= raw(markdown(@article.content)) %>
+    </p>
+  </div>
+</article>
+

@@ -1,0 +1,10 @@
+<% @articles.each do |article| %>
+    <article>
+      <h1><%= link_to article.name, article_path(article) %></h1>
+      <div class="meta"><%= article.created_at.strftime('%Y-%m-%d') %></div>
+      <p>
+        <%= markdown(article.content) %>
+      </p>
+    </article>
+<% end %>
+<%= paginate @articles %>

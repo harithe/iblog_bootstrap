@@ -1,0 +1,16 @@
+<article>
+  <header>
+    <h1><%= @article.name %>
+      <small><%= link_to "edit", edit_admin_article_path(@article) %></small>
+      <small><%= link_to "Destroy", [:admin, @article], :confirm => 'Are you sure?', :method => :delete %></small>
+    </h1>
+  </header>
+
+  <div>
+    <div class="meta"><%= @article.created_at.strftime('%Y-%m-%d') %></div>
+    <p>
+      <%= markdown(@article.content) %>
+    </p>
+  </div>
+</article>
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= content_for?(:title) ? yield(:title) : "Leo的日志" %></title>
+  <%= stylesheet_link_tag "admin" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header class="navbar navbar-fixed-top">
+  <%= render "layouts/admin/header" %>
+</header>
+
+<div class="container master-container">
+  <div class="content">
+    <% if notice %>
+        <div class="alert alert-success fade in" data-alert="alert">
+          <a class="close" data-dismiss='alert' href="#">×</a>
+
+          <p><%= notice %></p>
+        </div>
+    <% end %>
+    <%= yield :breadcrumb %>
+    <%= yield %>
+  </div>
+</div>
+<%= javascript_include_tag "application" %>
+<%= debug(params) if  Rails.env.development? %>
+</body>
+</html>
