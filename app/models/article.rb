@@ -5,8 +5,6 @@ class Article < ActiveRecord::Base
 
   acts_as_taggable
 
-  has_many :comments
-
   validates :name, :presence => true
 
   scope :recent, Article.where( :published => true ).limit(5)
@@ -14,6 +12,6 @@ class Article < ActiveRecord::Base
   scope :unpublished, Article.where(:published => false)
 
   def to_param 
-    "#{id}-#{name.gsub(/\s|(,)/, '-')}.html"
+    "#{id}-#{name.gsub(/\s|(,)/, '-')}"
   end
 end

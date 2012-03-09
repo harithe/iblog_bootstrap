@@ -13,6 +13,9 @@
     <% if params[:action] == "edit" %>
         <li class="active"><span>修改</span></li>
     <% end %>
+    <% if params[:action] == "show" %>
+        <li class="active"><span>显示</span></li>    
+    <% end %>
 </ul>
 <% end %>
 
